@@ -30,7 +30,7 @@ namespace SimpleTCP
             _autoTrim = autoTrim;
         }
         
-        public string TcpClient => _tcpClient;
+        public TcpClient TcpClient => _tcpClient;
             
         public byte[] Data { get; private set; }
         public string MessageString
