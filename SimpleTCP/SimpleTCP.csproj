@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <LangVersion>Latest</LangVersion>
 
-    <IntVersion>1.0.25.0</IntVersion>
+    <IntVersion>1.0.25</IntVersion>
     <Authors>BrandonPotter</Authors>
     <Title>SimpleTCP Client/Server</Title>
     <Description>Simple Class to connect to an FHEM instance</Description>
