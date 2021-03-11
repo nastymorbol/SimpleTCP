@@ -1,16 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <LangVersion>Latest</LangVersion>
-
     <IntVersion>1.0.25</IntVersion>
     <Authors>BrandonPotter</Authors>
     <Title>SimpleTCP Client/Server</Title>
     <Description>Simple Class to connect to an FHEM instance</Description>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageReleaseNotes>
+    </PackageReleaseNotes>
     <PackageId>NMB.SimpleTCP</PackageId>
-    
     <RootNamespace>SimpleTCP</RootNamespace>
     <AssemblyName>SimpleTCP</AssemblyName>
     <PackageVersion>$(IntVersion)</PackageVersion>
@@ -18,26 +16,20 @@
     <AssemblyFileVersion>$(IntVersion)</AssemblyFileVersion>
     <FileVersion>$(IntVersion)</FileVersion>
     <PackageSummary>Simple and straightforward library for TCP client and servers. Extremely useful for reading/writing with line-by-line command interfaces. Supports binary and string messages, automatic string trimming, and end-of-message delimiter (newline by default). $(IntVersion)</PackageSummary>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>SimpleTCP socket client server tcp</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <NeutralLanguage>en</NeutralLanguage>
     <Copyright>Copyright ©2015</Copyright>
-    <PackageLanguage>en</PackageLanguage>    
-
+    <PackageLanguage>en</PackageLanguage>
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
-
-   <ItemGroup>
-
-   </ItemGroup> 
-
-
+  <ItemGroup>
+  </ItemGroup>
   <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
     <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))"/>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
     </ItemGroup>
   </Target>
-
 </Project>
