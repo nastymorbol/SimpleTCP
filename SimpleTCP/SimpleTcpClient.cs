@@ -170,7 +170,11 @@ namespace SimpleTCP
 		public Message WriteLineAndGetReply(string data, TimeSpan timeout)
 		{
 			Message mReply = null;
-			this.DataReceived += (s, e) => { mReply = e; };
+			this.DataReceived += (s, e) =>
+			{
+				//if (e.MessageString.EndsWith("fhem> "))
+				mReply = e;
+			};
 			WriteLine(data);
 
 			Stopwatch sw = new Stopwatch();
